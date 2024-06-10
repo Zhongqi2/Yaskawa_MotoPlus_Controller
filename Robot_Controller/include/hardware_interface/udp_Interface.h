@@ -19,8 +19,6 @@
 #include "iostream"
 #include "udp_socket.h"
 
-namespace stmotion_controller
-{
 namespace udp
 {
 struct header_pack{
@@ -150,12 +148,11 @@ class UDP_Interface
         unsigned int get_timeout_us() {return timeout_us;}
 
         // Operations
-        void Setup(int port_define);
+        void ClientSetup(int port_define);
         void ServerSetup(int port_define);
         void Shutdown();
         void SendJointPos(float* joint_pos_cmd);
         void GetJointPos(float* joint_pos_fbk);
         void SendEndPack();
 };
-}
 }

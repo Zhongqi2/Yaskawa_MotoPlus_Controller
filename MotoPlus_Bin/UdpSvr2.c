@@ -9,22 +9,22 @@ void moto_plus0_task(void);
 void ap_UDP_Send_server(ULONG portNo);
 void ap_UDP_Send_client_two(ULONG portNo);
 
-#define PORT        11000
-#define PORT1        11001 //port open for c++	
-#define PORT2        11002 //port open for python
+#define POS_CMD_PORT        11000
+#define POS_STATE_PORT        11001 //port open for c++	
+
 #define BUFF_MAX    1023
 
 void moto_plus1_task(void)
 {
 	puts("Activate moto_plus1_task!");
-	ap_UDP_Send_client_two(PORT1);
+	ap_UDP_Send_client_two(POS_STATE_PORT);
 	mpSuspendSelf;
 }
 
 void moto_plus0_task(void)
 {  
     puts("Activate moto_plus0_task!");
-	ap_UDP_Send_server(PORT);
+	ap_UDP_Send_server(POS_CMD_PORT);
 
     mpSuspendSelf;
 }
@@ -34,9 +34,7 @@ void ap_UDP_Send_client_two(ULONG portNo)
 	int     sockHandle;
 	struct  sockaddr_in     serverSockAddr;
 	struct  sockaddr_in     clientSockAddr;
-	int     sockHandle1;
-	struct  sockaddr_in     serverSockAddr1;
-	struct  sockaddr_in     clientSockAddr1;
+
 	int     sizeofSockAddr;
 	int     rc;
 	float joint_pos_fbk[6] = { 0 };
@@ -51,26 +49,18 @@ void ap_UDP_Send_client_two(ULONG portNo)
 	MP_EXPOS_DATA moveData;
 	char    buff_send[24];
 	int     bytesSend;
-	const char* SERVER_IP = "192.168.1.31";
+	const char* SERVER_IP = "192.168.1.31";  //For udp client, you need to specify the server IP which is create by IPC ports
 	while (1)
 	{
 		// construct the UDP server
 		sockHandle = mpSocket(AF_INET, SOCK_DGRAM, 0);
 		if (sockHandle < 0)
 			return;
-		sockHandle1 = mpSocket(AF_INET, SOCK_DGRAM, 0);
-		if (sockHandle1 < 0)
-			return;
 
 		memset(&serverSockAddr, 0, sizeof(serverSockAddr));
 		serverSockAddr.sin_family = AF_INET;
 		serverSockAddr.sin_addr.s_addr = mpInetAddr(SERVER_IP);
-		serverSockAddr.sin_port = mpHtons(PORT1);
-
-		memset(&serverSockAddr1, 0, sizeof(serverSockAddr1));
-		serverSockAddr1.sin_family = AF_INET;
-		serverSockAddr1.sin_addr.s_addr = mpInetAddr(SERVER_IP);
-		serverSockAddr1.sin_port = mpHtons(PORT2);
+		serverSockAddr.sin_port = mpHtons(portNo);
 
 		// get the pluse to rad value
 		status = GP_getPulseToRad(0, &PulseToRad);
@@ -86,17 +76,9 @@ void ap_UDP_Send_client_two(ULONG portNo)
 				joint_pos_fbk[i] = pulse_data_fbk.lPos[i] / PulseToRad.PtoR[i];
 			}
 			memcpy(buff_send, joint_pos_fbk, sizeof(joint_pos_fbk));
+
 			bytesSend = mpSendTo(sockHandle, buff_send, sizeof(joint_pos_fbk), 0,
 				(struct sockaddr *)&serverSockAddr, sizeof(serverSockAddr));
-
-			if (bytesSend != sizeof(joint_pos_fbk))
-			{
-				printf("send joint error %d", bytesSend);
-				break;
-			}
-
-			bytesSend = mpSendTo(sockHandle1, buff_send, sizeof(joint_pos_fbk), 0,
-				(struct sockaddr *)&serverSockAddr1, sizeof(serverSockAddr1));
 
 			if (bytesSend != sizeof(joint_pos_fbk))
 			{
@@ -192,10 +174,10 @@ void ap_UDP_Send_server(ULONG portNo)
 				/* get pluse fbk*/
 				mpGetPulsePos(&sData, &pulse_data_fbk);
 
-				for (i = 0; i < 6; i++)
-				{
-					joint_pos_fbk[i] = pulse_data_fbk.lPos[i] / PulseToRad.PtoR[i];
-				}
+				// for (i = 0; i < 6; i++)
+				// {
+				// 	joint_pos_fbk[i] = pulse_data_fbk.lPos[i] / PulseToRad.PtoR[i];
+				// }
 				//joint_pos_fbk[6] = joint_pos_cmd[6];
 				//printf("joint des/fbk %f %f \n", joint_pos_cmd[5], joint_pos_fbk[5]);
 

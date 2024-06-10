@@ -8,8 +8,6 @@
 #include <arpa/inet.h> 
 #include <netinet/in.h>
 #include <fcntl.h>
-namespace stmotion_controller
-{
 namespace udp
 {
 class UDP_Socket
@@ -26,7 +24,7 @@ class UDP_Socket
         {
         }
 
-        void Setup(const std::string& IP_addr, unsigned short port, unsigned int timeout_us)  
+        void ClientSetup(const std::string& IP_addr, unsigned short port, unsigned int timeout_us)  
         {
             try{
                 if((sockfd = socket(AF_INET, SOCK_DGRAM, 0)) < 0)
@@ -93,11 +91,16 @@ class UDP_Socket
             struct sockaddr_in clientAddr;
             socklen_t clientAddrLen = sizeof(clientAddr);
             ssize_t recvlen = recvfrom(sockfd, buffer, len, 0, (struct sockaddr*)&clientAddr, &clientAddrLen);
-            // int ret = recvfrom(sockfd, buffer, len, 0, (sockaddr*)&addr, &addr_len);
             if (recvlen < 0)
             {
                 printf("UDP socket recv failed!"); 
             }
+
+            // int ret = recvfrom(sockfd, buffer, len, 0, (sockaddr*)&addr, &addr_len);
+            // if (ret < 0)
+            // {
+            //     printf("UDP socket recv failed!"); 
+            // }
         }
 
         void Close(){
@@ -114,5 +117,4 @@ class UDP_Socket
         socklen_t addr_len;
         socklen_t addr_send_len;
 };
-}
 }
