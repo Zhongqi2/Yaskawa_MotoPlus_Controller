@@ -66,31 +66,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Controller.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CtrlGroup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MotionServer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ParameterExtraction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SimpleMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StateServer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ParameterTypes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IoServer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MotoROS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -98,10 +77,7 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UdpSvr1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="UdpSvr2.c">
+    <ClCompile Include="UdpSvr.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

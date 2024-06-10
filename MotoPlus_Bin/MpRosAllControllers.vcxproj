@@ -27,6 +27,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
     <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
+    <ProjectName>MotoPlus_Bin</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DX100|Win32'" Label="Configuration">
@@ -177,20 +178,12 @@
     <None Include="YRC1000uLinkerArguments.mps" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Controller.h" />
-    <ClInclude Include="CtrlGroup.h" />
-    <ClInclude Include="IoServer.h" />
-    <ClInclude Include="MotionServer.h" />
-    <ClInclude Include="MotoROS.h" />
     <ClInclude Include="ParameterExtraction.h" />
     <ClInclude Include="ParameterTypes.h" />
-    <ClInclude Include="SimpleMessage.h" />
-    <ClInclude Include="StateServer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
-    <ClCompile Include="UdpSvr1.c" />
-    <ClCompile Include="UdpSvr2.c" />
+    <ClCompile Include="UdpSvr.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

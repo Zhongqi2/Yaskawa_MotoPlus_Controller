@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64C31524-A3C4-49D4-AD04-955D44202226}|MpRosAllControllers.vcxproj|C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64C31524-A3C4-49D4-AD04-955D44202226}|MpRosAllControllers.vcxproj|solutionrelative:main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C31524-A3C4-49D4-AD04-955D44202226}|MpRosAllControllers.vcxproj|C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\ParameterTypes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64C31524-A3C4-49D4-AD04-955D44202226}|MpRosAllControllers.vcxproj|solutionrelative:ParameterTypes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C31524-A3C4-49D4-AD04-955D44202226}|MpRosAllControllers.vcxproj|C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\ParameterExtraction.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64C31524-A3C4-49D4-AD04-955D44202226}|MpRosAllControllers.vcxproj|solutionrelative:ParameterExtraction.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64C31524-A3C4-49D4-AD04-955D44202226}|MpRosAllControllers.vcxproj|C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\UdpSvr.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{64C31524-A3C4-49D4-AD04-955D44202226}|MpRosAllControllers.vcxproj|solutionrelative:UdpSvr.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ParameterTypes.h",
+              "DocumentMoniker": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\ParameterTypes.h",
+              "RelativeDocumentMoniker": "ParameterTypes.h",
+              "ToolTip": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\ParameterTypes.h",
+              "RelativeToolTip": "ParameterTypes.h",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAABcAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-10T18:57:46.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ParameterExtraction.h",
+              "DocumentMoniker": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\ParameterExtraction.h",
+              "RelativeDocumentMoniker": "ParameterExtraction.h",
+              "ToolTip": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\ParameterExtraction.h",
+              "RelativeToolTip": "ParameterExtraction.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-10T18:57:32.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UdpSvr.c",
+              "DocumentMoniker": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\UdpSvr.c",
+              "RelativeDocumentMoniker": "UdpSvr.c",
+              "ToolTip": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\UdpSvr.c",
+              "RelativeToolTip": "UdpSvr.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-06-10T18:51:38.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\main.c",
+              "RelativeDocumentMoniker": "main.c",
+              "ToolTip": "C:\\Users\\icl\\Desktop\\Yaskawa_MotoPlus_Controller\\MotoPlus_Bin\\main.c",
+              "RelativeToolTip": "main.c",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2024-06-10T18:51:37.356Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
