@@ -94,7 +94,7 @@ class UDP_Interface
     /*                                  variables                                 */
     /* -------------------------------------------------------------------------- */
     private:
-        std::string IP_addr = "192.168.1.31";
+        std::string IP_addr = "192.168.1.74";
         int port = 11000;
         unsigned int timeout_us = 100000; // us
 
@@ -148,7 +148,7 @@ class UDP_Interface
         unsigned int get_timeout_us() {return timeout_us;}
 
         // Operations
-        void ClientSetup(int port_define);
+        void ClientSetup(const std::string& IP_addr, int port_define);
         void ServerSetup(int port_define);
         void Shutdown();
         void SendJointPos(float* joint_pos_cmd);

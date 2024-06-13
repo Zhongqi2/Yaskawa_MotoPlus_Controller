@@ -5,7 +5,7 @@ namespace udp
     UDP_Interface::UDP_Interface()
     {
     }
-    void UDP_Interface::ClientSetup(int port_define)
+    void UDP_Interface::ClientSetup(const std::string& IP_addr,  int port_define)
     {
         try
         {

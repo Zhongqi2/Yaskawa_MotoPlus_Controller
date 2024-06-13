@@ -1,4 +1,4 @@
-# Install script for directory: /home/zhongqi/Documents/workspace/Yaskawa_MotoPlus_Controller/Robot_Controller
+# Install script for directory: /home/zhongqi/Documents/Yaskawa_MotoPlus_Controller/Robot_Controller
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/zhongqi/Documents/workspace/Yaskawa_MotoPlus_Controller/Robot_Controller/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zhongqi/Documents/Yaskawa_MotoPlus_Controller/Robot_Controller/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
