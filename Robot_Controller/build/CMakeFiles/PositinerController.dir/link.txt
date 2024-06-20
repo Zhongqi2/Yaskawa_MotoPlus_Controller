@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -Wall -g CMakeFiles/PositinerController.dir/src/hardware_interface/hardware_interface.cpp.o CMakeFiles/PositinerController.dir/src/hardware_interface/udp_Interface.cpp.o CMakeFiles/PositinerController.dir/src/position_controller.cpp.o -o PositinerController  -lpthread -lrt -lm 

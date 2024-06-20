@@ -1,3 +1,0 @@
-/home/zhongqi/Documents/Yaskawa_MotoPlus_Controller/Robot_Controller/build/CMakeFiles/PositinerController.dir
-/home/zhongqi/Documents/Yaskawa_MotoPlus_Controller/Robot_Controller/build/CMakeFiles/edit_cache.dir
-/home/zhongqi/Documents/Yaskawa_MotoPlus_Controller/Robot_Controller/build/CMakeFiles/rebuild_cache.dir
